@@ -1,0 +1,299 @@
+body{
+    background: #f5f5f5;
+    margin: 0;
+}
+
+.container{
+    background-image: url('./public/images/mainsite/background.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: auto;
+}
+
+.home__left{
+    width: 80%;
+    height: 100%;
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.home__left .row-header{
+    height: 41px;
+    position: relative;
+}
+
+.home__left .wrap-logo{
+    height: 100%;
+    width: 200px;
+}
+
+.home__left .wrap-logo .logo{
+    width: 100%;
+    height: 100%;
+    background: url(./public/images/mainsite/mainsite_list_box.png) -100px -52px;
+    -webkit-background-size: 115%;
+    background-size: 115%;
+    background-repeat: no-repeat;
+}
+
+.home__left .wrap-action{
+    width: 100%;
+    height: 80px;
+    justify-items: flex-end;
+    display: flex;
+    align-items: end;
+    position: relative;
+}
+
+.home__left .wrap-action .stock{
+    background: url(./public/images/mainsite/button.png) -123px -16px;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 368px;
+    margin-right: 15px;
+    z-index: 2;
+    position: absolute;
+    right: 20.9%;
+}
+
+.home__left .wrap-action .gift{
+    background: url(./public/images/mainsite/button.png) -182px -16px;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 368px;
+    margin-right: 15px;
+    z-index: 2;
+    position: absolute;
+    right: 9.5%;
+}
+
+.home__left .wrap-action .history{
+    background: url(./public/images/mainsite/button.png) -241px -16px;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 368px;
+    margin-right: 15px;
+    z-index: 2;
+    position: absolute;
+    right: -2%;
+}
+
+.home__left .wrap-action .arrow{
+    background: url(./public/images/mainsite/button.png) -123px 4px;
+    height: 20px;
+    width: 242px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 365px;
+    margin-right: 15px;
+    z-index: 1;
+    position: absolute;
+    top: 47%;
+    right: -1.8%;
+}
+
+.home__left .box{
+    background: url(./public/images/mainsite/ruong.png);
+    background-position: 62% 61%;
+    height: 41%;
+    width: 50%;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 49%;
+    z-index: 11;
+    text-align: end;
+    align-items: end;
+    background-attachment: fixed;
+    position: fixed;
+}
+
+.home__left .btn-left{
+    background: url(./public/images/mainsite/button.png) 2px 2px;
+    width: 122px;
+    height: 40px;
+    background-size: 293%;
+    background-repeat: no-repeat;
+    z-index: 4;
+    margin: 0 11px 0 5px;
+    display: inline-block;
+}
+
+.home__left .btn-right{
+    background: url(./public/images/mainsite/button.png);
+    background-position: 0% 50%;
+    width: 122px;
+    height: 40px;
+    background-size: 293%;
+    background-repeat: no-repeat;
+    z-index: 4;
+    display: inline-block;
+    margin: 0 5px 0 11px;
+}
+
+.home__left .btn-bottom{
+    background: url(./public/images/mainsite/button.png);
+    background-position: -0.5% 101%;
+    width: 122px;
+    height: 40px;
+    background-size: 293%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    margin: 0 5px 0 11px;
+}
+
+.home__left .row-wrap-btn-bottom{
+    width: 134px;
+    z-index: 10;
+    margin: 0 auto;
+}
+
+.row-map{
+    background: url(./public/images/mainsite/map.png);
+    background-position: 103% 83%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.row-box{
+    height: 41%;
+}
+
+.row-button{
+    position: absolute;
+    bottom: 4.5%;
+    left: 38%;
+    z-index: 1;
+}
+
+.character{
+    background: url(./public/images/mainsite/nhanvat.png);
+    background-position: 4% 101%;
+    height: 100%;
+    width: 37%;
+    background-repeat: no-repeat;
+    background-size: 28%;
+    z-index: 3;
+    position: fixed;
+    bottom: 0px;
+    background-attachment: fixed;
+}
+
+.title{
+    background: url(./public/images/mainsite/title.png);
+    background-position: 10% 50%;
+    height: 48%;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-size: 97%;
+    z-index: 3;
+    position: absolute;
+    top: 2px;
+    right: 52.5%;
+}
+
+.home__right{
+    width: 20%;
+    height: 100%;
+    float: right;
+    position: relative;
+    z-index: 4;
+}
+
+.home__right .right__top{
+    height: 18%;
+}
+
+.home__right .right__bottom{
+    height: 82%;
+}
+
+.home__right .wrap-gift-item{
+    width: 70%;
+    height: 100%;
+}
+
+.home__right .right__bottom .gift__item{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.home__right .right__bottom  .gift__item--disabled-lv5{
+    background: url(./public/images/mainsite/MocNhanQua_Item.png);
+    background-position: -0.5% 0%;
+    height: 89%;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: 488%;
+    z-index: 5;
+    margin-left: auto;
+}
+
+.home__right .right__bottom  .gift__item--disabled-lv4{
+    background: url(./public/images/mainsite/MocNhanQua_Item.png);
+    background-position: 24.88% 0%;
+    height: 89%;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: 488%;
+    z-index: 5;
+    margin-left: auto;
+}
+
+.home__right .right__bottom .gift__item--active-lv3{
+    background: url(./public/images/mainsite/MocNhanQua_Item.png);
+    background-position: 50.05% 38%;
+    height: 89%;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: 488%;
+    z-index: 5;
+    margin-left: auto;
+}
+
+.home__right .right__bottom .gift__item--received-lv2{
+    background: url(./public/images/mainsite/MocNhanQua_Item.png);
+    background-position: 75.2% 38%;
+    height: 89%;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: 488%;
+    z-index: 5;
+    margin-left: auto;
+}
+
+.home__right .right__bottom .gift__item--received-lv1{
+    background: url(./public/images/mainsite/MocNhanQua_Item.png);
+    background-position: 100.05% 38%;
+    height: 89%;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: 488%;
+    z-index: 5;
+    margin-left: auto;
+}
+
+
+/* ------------------------------------ */
+.justify-content-end{
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.align-items-end{
+    align-items: flex-end;
+}
