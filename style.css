@@ -1,6 +1,13 @@
+@font-face {
+    font-family: Barlow;
+    src: url('./public/fonts/Barlow-Medium.ttf');
+}
+
 body{
     background: #f5f5f5;
     margin: 0;
+    font-family: 'Barlow';
+
 }
 
 .container{
@@ -205,6 +212,21 @@ body{
     right: 52.5%;
 }
 
+.cicle{
+    background: url(./public/images/mainsite/MocNhanQua_scrollbar.png);
+    background-position: 113.5% 79%;
+    height: 18%;
+    width: 5%;
+    background-repeat: no-repeat;
+    background-size: 17.5%;
+    z-index: 5;
+    display: inline-block;
+    background-attachment: fixed;
+    position: fixed;
+    top: 49%;
+    right: 0;
+}
+
 .home__right{
     width: 20%;
     height: 100%;
@@ -214,77 +236,175 @@ body{
 }
 
 .home__right .right__top{
-    height: 18%;
+    height: 17%;
 }
 
 .home__right .right__bottom{
-    height: 82%;
+    height: 83%;
+    position: relative;
+    overflow: auto;
 }
 
 .home__right .wrap-gift-item{
-    width: 70%;
+    width: 74%;
     height: 100%;
+    float: left;
 }
 
 .home__right .right__bottom .gift__item{
     height: 20%;
     display: flex;
     align-items: center;
+    justify-content: end
 }
 
 .home__right .right__bottom  .gift__item--disabled-lv5{
     background: url(./public/images/mainsite/MocNhanQua_Item.png);
-    background-position: -0.5% 0%;
-    height: 89%;
-    width: 90%;
+    background-position: 227.7% 40%;
+    height: 15.5%;
+    width: 12.8%;
     background-repeat: no-repeat;
-    background-size: 488%;
+    background-size: 64%;
     z-index: 5;
     margin-left: auto;
+    background-attachment: fixed;
+    position: fixed;
 }
 
 .home__right .right__bottom  .gift__item--disabled-lv4{
     background: url(./public/images/mainsite/MocNhanQua_Item.png);
-    background-position: 24.88% 0%;
-    height: 89%;
-    width: 90%;
+    background-position: 192% 77.5%;
+    height: 15.5%;
+    width: 12.8%;
     background-repeat: no-repeat;
-    background-size: 488%;
+    background-size: 64%;
     z-index: 5;
     margin-left: auto;
+    background-attachment: fixed;
+    position: fixed;
 }
 
 .home__right .right__bottom .gift__item--active-lv3{
     background: url(./public/images/mainsite/MocNhanQua_Item.png);
-    background-position: 50.05% 38%;
-    height: 89%;
-    width: 90%;
+    background-position: 156.5% 80%;
+    height: 15.5%;
+    width: 12.8%;
     background-repeat: no-repeat;
-    background-size: 488%;
+    background-size: 64%;
     z-index: 5;
     margin-left: auto;
+    background-attachment: fixed;
+    position: fixed;
 }
 
 .home__right .right__bottom .gift__item--received-lv2{
     background: url(./public/images/mainsite/MocNhanQua_Item.png);
-    background-position: 75.2% 38%;
-    height: 89%;
-    width: 90%;
+    background-position: 120.9% 117%;
+    height: 15.5%;
+    width: 12.8%;
     background-repeat: no-repeat;
-    background-size: 488%;
+    background-size: 64%;
     z-index: 5;
     margin-left: auto;
+    position: fixed;
+    background-attachment: fixed;
 }
 
 .home__right .right__bottom .gift__item--received-lv1{
     background: url(./public/images/mainsite/MocNhanQua_Item.png);
-    background-position: 100.05% 38%;
-    height: 89%;
-    width: 90%;
+    background-position: 85.5% 155%;
+    height: 15.5%;
+    width: 12.8%;
     background-repeat: no-repeat;
-    background-size: 488%;
+    background-size: 64%;
     z-index: 5;
     margin-left: auto;
+    background-attachment: fixed;
+    position: fixed;
+}
+
+.home__right .right__bottom .scrollbar{
+    width: 26%;
+    height: 100%;
+    float: right;
+    position: absolute;
+    right: 6.2px;
+}
+
+.home__right .right__bottom .scrollbar .sroll-top{
+    height: 40%;
+}
+
+.home__right .right__bottom .scrollbar .sroll-top-left{
+    background: url(./public/images/mainsite/MocNhanQua_scrollbar.png);
+    background-position: 0.5% 0%;
+    height: 100%;
+    width: 7%;
+    background-repeat: no-repeat;
+    background-size: 5000%;
+    z-index: 5;
+    display: inline-block;
+}
+
+.home__right .right__bottom .scrollbar .sroll-top-right{
+    background: url(./public/images/mainsite/MocNhanQua_scrollbar.png);
+    background-position: 0.5% 0%;
+    height: 100%;
+    width: 7%;
+    background-repeat: no-repeat;
+    background-size: 5000%;
+    z-index: 5;
+    display: inline-block;
+    margin-left: 35%;
+}
+
+.home__right .right__bottom .scrollbar .sroll-bottom{
+    height: 58%;
+}
+
+.home__right .right__bottom .scrollbar .wrap-scrollbar-text{
+    width: 54%;
+    height: 100%;
+    text-align: center;
+    line-height: 11px;
+    position: absolute;
+    top: 0;
+    left: 1%;
+}
+
+.home__right .right__bottom .scrollbar .wrap-scrollbar-text .scrollbar-text{
+    font-size: 8px;
+    color: #e1c9a2;
+    line-height: 9px;
+    overflow-wrap: break-word;
+    text-align: center;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home__right .right__bottom .scrollbar .sroll-bottom-left{
+    background: url(./public/images/mainsite/MocNhanQua_scrollbar.png);
+    background-position: 2.82% 0%;
+    height: 100%;
+    width: 7%;
+    background-repeat: no-repeat;
+    background-size: 5000%;
+    z-index: 5;
+    display: inline-block;
+}
+
+.home__right .right__bottom .scrollbar .sroll-bottom-right{
+    background: url(./public/images/mainsite/MocNhanQua_scrollbar.png);
+    background-position: 2.82% 0%;
+    height: 100%;
+    width: 7%;
+    background-repeat: no-repeat;
+    background-size: 5000%;
+    z-index: 5;
+    display: inline-block;
+    margin-left: 35%;
 }
 
 
