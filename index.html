@@ -19,8 +19,8 @@
         <div class="home__left">
             <div class="row justify-content-end">
                 <div class="wrap-action">
-                    <div class="stock"></div>
-                    <div class="gift"></div>
+                    <div class="stock" onclick="openPopUp('popup__gift-stock')"></div>
+                    <div class="gift" onclick="openPopUp('popup__gift-exchange')"></div>
                     <div class="history"></div>
                     <div class="arrow"></div>
                 </div>
@@ -37,8 +37,8 @@
             </div>
             <div class="row-button">
                 <div class="row-wrap-btn-top">
-                    <div class="btn-left"></div>
-                    <div class="btn-right"></div>
+                    <div class="btn-left" onclick="openPopUp('popup__gift-1')"></div>
+                    <div class="btn-right" onclick="openPopUp('popup__gift-5')"></div>
                 </div>
                 <div class="row-wrap-btn-bottom">
                     <div class="btn-bottom"></div>
@@ -104,6 +104,44 @@
             </div>
         </div>
         <div class="row-map"></div>
+        <div id="popup__gift-1" class="popup popup__gift">
+            <div class="popup__background"></div> 
+            <div class="popup__content">
+                popop content 1
+                <div class="popup__close" onclick="closePopUp('popup__gift-1')"></div>
+            </div>
+        </div>
+        <div id="popup__gift-5" class="popup popup__gift">
+            <div class="popup__background"></div> 
+            <div class="popup__content">
+                popop content 5
+                <div class="popup__close" onclick="closePopUp('popup__gift-5')"></div>
+            </div>
+        </div>
+        <div id="popup__gift-stock" class="popup popup__gift-info popup__gift-check">
+            <div class="popup__background"></div> 
+            <div class="popup__content">
+                <div class="popup__title">
+                    <div class="name"></div>
+                    <div class="line"></div>
+                    <div class="sub-name">QUÀ TẶNG</div>
+                </div>
+                Pop up kho quà
+                <div class="popup__close" onclick="closePopUp('popup__gift-stock')"></div>
+            </div>
+        </div>
+        <div id="popup__gift-exchange" class="popup popup__gift-info popup__gift-exchange">
+            <div class="popup__background"></div> 
+            <div class="popup__content">
+                <div class="popup__title">
+                    <div class="name"></div>
+                    <div class="line"></div>
+                </div>
+                Pop up đổi quà
+                <div class="popup__close" onclick="closePopUp('popup__gift-exchange')"></div>
+            </div>
+        </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
