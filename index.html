@@ -13,15 +13,24 @@
         <div class="title"></div>
         <div class="cicle"></div>
         <div class="logo"></div>
-        <div class="select-languages">
+        <div class="select-languages" onclick="openSelectLanguages()">
             <div class="language-text">Việt Nam</div>
         </div>
+        <div id="option-languages">
+            <div class="wrap-option">
+                <div class="option-item" onclick="closeSelectLanguages()">Việt Nam</div>
+                <div class="option-item" onclick="closeSelectLanguages()">Thailand</div>
+                <div class="option-item" onclick="closeSelectLanguages()">Indonesia</div>
+                <div class="option-item" onclick="closeSelectLanguages()">Philipines</div>
+            </div>  
+        </div>
+
         <div class="home__left">
             <div class="row justify-content-end">
                 <div class="wrap-action">
                     <div class="stock" onclick="openPopUp('popup__gift-stock')"></div>
                     <div class="gift" onclick="openPopUp('popup__gift-exchange')"></div>
-                    <div class="history"></div>
+                    <div class="history" onclick="openPopUp('popup__gift-history')"></div>
                     <div class="arrow"></div>
                 </div>
             </div>
@@ -41,7 +50,7 @@
                     <div class="btn-right" onclick="openPopUp('popup__gift-5')"></div>
                 </div>
                 <div class="row-wrap-btn-bottom">
-                    <div class="btn-bottom"></div>
+                    <div class="btn-bottom" onclick="openPopUp('popup__receive-turn')"></div>
                 </div>
             </div>
         </div>
@@ -139,6 +148,86 @@
                 </div>
                 Pop up đổi quà
                 <div class="popup__close" onclick="closePopUp('popup__gift-exchange')"></div>
+            </div>
+        </div>
+        <div id="popup__gift-history" class="popup popup__gift-info popup__gift-history">
+            <div class="popup__background"></div> 
+            <div class="popup__content">
+                <div class="popup__title">
+                    <div class="name"></div>
+                    <div class="line"></div>
+                </div>
+                Pop up lịch sử
+                <div class="popup__close" onclick="closePopUp('popup__gift-history')"></div>
+            </div>
+        </div>
+        <div id="popup__receive-turn" class="popup">
+            <div class="popup__background"></div> 
+            <div class="popup__content">
+                <div class="popup__content--padding">
+                    <div class="content__top">
+                        <div class="btn-receive" onclick="openPopUpReceiveGiftFree('popup__receive-turn-free')"></div>
+                        <div class="text">Mỗi ngày, Chúa công được nhận 01 lượt mở miễn phí</div>
+                    </div>
+                    <div class="content__bottom">
+                        <div class="btn-buy"></div>
+                        <div class="text">Dùng CP mua lượt mở kho báu, 01 lượt mở = 90 CP </br> 
+                            Mở kho báu đạt mốc nhận thêm quà hấp dẫn
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__close" onclick="closePopUp('popup__receive-turn')"></div>
+            </div>
+        </div>
+        <div id="popup__receive-turn-free" class="popup">
+            <div class="popup__background"></div> 
+            <div class="popup__content">
+                    <div class="content__top">
+                        <div class="title__receive-turn-free">NHẬN LƯỢT MỞ MIỄN PHÍ</div>
+                        <div class="text">Mỗi ngày, Chúa công được nhận 01 lượt mở miễn phí</div>
+                        <div class="btn-receive"></div>
+                    </div>
+                    <div class="content__bottom">
+                        <table class="table__receive-turn-free">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th class="text-start">Điều kiện</th>
+                                    <th>Số lượt</th>
+                                    <th>Thời gian</th>
+                                </tr>
+                            </thead>
+                        </table>
+                            <div class="table__scroll">
+                                <table class="table__receive-turn-free">
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="text-start">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td>1</td>
+                                        <td>Germany</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="text-start">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td>1</td>
+                                        <td>Mexico</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="text-start">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td>2</td>
+                                        <td>Mexico</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="text-start">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td>2</td>
+                                        <td>Mexico</td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                <div class="popup__close" onclick="closePopUp('popup__receive-turn-free')"></div>
             </div>
         </div>
     </div>
