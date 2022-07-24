@@ -918,7 +918,103 @@ body{
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
+    .title{
+        top: 6%;
+        right: 55%;
+    }
 
+    .row-button{
+        left: 35%;
+        bottom: 10px;
+    }
+
+    .home__left .box{
+        background-position: 68% 73% !important;
+    }
+
+    .home__left .wrap-action{
+        width: 37%;
+    }
+
+    .home__left .wrap-action .arrow{
+        width: 215px;
+        top: 34%;
+    }
+    
+    .cicle{
+        top: 48% !important;
+        background-position: 21.5% 25%;
+        height: 77.8px;
+        width: 35px;
+        right: 4px !important;
+    }
+
+    .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
+        right: 2%;
+    }
+
+    .home__left .light-box{
+        background-size: 49%;
+        background-position: 62% 61%;
+    }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .title{
+        top: 9% !important;
+        right: 53% !important;
+        background-size: 96% !important;
+    }
+
+    .home__left .wrap-action{
+        width: 42% !important;
+    }
+
+    .home__left .wrap-action .arrow{
+        width: 200px !important;
+    }
+
+    .home__left .box{
+        background-position: 68% 71% !important;
+    }
+
+    .row-button{
+        left: 30% !important;
+        bottom: 6px !important;
+    }
+
+    .home__right .right__bottom .gift__item--disabled-lv5 {
+        background-position: 0% -7.5%;
+    }
+
+    .home__right .right__bottom .gift__item--disabled-lv4 {
+        background-position: 25% -7%;
+    }
+
+    .home__right .right__bottom .gift__item--received-lv2 {
+        background-position: 74.99% 40%;
+    }
+
+    .home__right .right__bottom .gift__item--active-lv3 {
+        background-position: 50.2% 91%;
+    }
+
+    .home__right .right__bottom .gift__item--received-lv1 {
+        background-position: 100.2% 40.5%;
+    }
+
+    .cicle{
+        top: 27%;
+        right: 2px;
+    }
+
+    
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -938,7 +1034,7 @@ body{
     }
 
     .home__left .box{
-        background-position: 68% 87%;
+        background-position: 68% 73% !important;
     }
 
     .home__left .wrap-action{
@@ -947,23 +1043,84 @@ body{
 
     .home__left .wrap-action .arrow{
         width: 215px;
-        top: 32%;
+        top: 34%;
     }
     
     .cicle{
-        top: 48%;
-        right: 4px;
-        background-position: 24.5% 21%;
+        top: 48% !important;
+        background-position: 21.5% 25%;
         height: 77.8px;
         width: 35px;
-        right: 4px;
+        right: 4px !important;
     }
 
-    .home__right .right__top .mount__opened{
+    .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
         right: 2%;
     }
 
-    .home__right .right__top .mount__available{
+    .home__left .light-box{
+        background-size: 49%;
+        background-position: 62% 61%;
+    }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .title{
+        top: 7%;
+        right: 53%;
+        background-size: 105%;
+    }
+    .cicle{
+        right: 5px;
+    }
+    .home__left .box{
+        background-position: 68% 108%;
+    }
+    .home__left .wrap-action{
+        width: 37%;
+    }
+    .home__left .wrap-action .arrow{
+        width: 240px;
+        top: 32%;
+    }
+    .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
         right: 2%;
+    }
+    .home__right .right__bottom .gift__item--received-lv1 {
+        background-position: 100.4% 38.5%;
+    }
+    .home__right .right__bottom .gift__item--received-lv2 {
+        background-position: 75.2% 38%;
+    }
+}
+
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .title{
+        top: 1%;
+        right: 50%;
+        background-size: 90%;
+    }
+    .cicle{
+        top: 48%;
+        right: 2px;
+    }
+    .home__left .wrap-action .arrow{
+        top: 35%;
+        width: 234px;
+    }
+    .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
+        right: 2.5%;
     }
 }
