@@ -13,25 +13,26 @@
         <div class="title"></div>
         <div class="cicle"></div>
         <div class="logo"></div>
-        <div class="select-languages" onclick="openSelectLanguages()">
-            <div class="language-text">Việt Nam</div>
+        <div class="wrap-select-languages">
+            <div class="select-languages" onclick="openSelectLanguages()">
+                <div class="language-text">Việt Nam</div>
+            </div>
+            <div id="option-languages">
+                <div class="wrap-option">
+                    <div class="option-item" onclick="closeSelectLanguages()">Việt Nam</div>
+                    <div class="option-item" onclick="closeSelectLanguages()">Thailand</div>
+                    <div class="option-item" onclick="closeSelectLanguages()">Indonesia</div>
+                    <div class="option-item" onclick="closeSelectLanguages()">Philipines</div>
+                </div>  
+            </div>
         </div>
-        <div id="option-languages">
-            <div class="wrap-option">
-                <div class="option-item" onclick="closeSelectLanguages()">Việt Nam</div>
-                <div class="option-item" onclick="closeSelectLanguages()">Thailand</div>
-                <div class="option-item" onclick="closeSelectLanguages()">Indonesia</div>
-                <div class="option-item" onclick="closeSelectLanguages()">Philipines</div>
-            </div>  
-        </div>
-
         <div class="home__left">
             <div class="row justify-content-end">
                 <div class="wrap-action">
-                    <div class="stock" onclick="openPopUp('popup__gift-stock')"></div>
-                    <div class="gift" onclick="openPopUp('popup__gift-exchange')"></div>
-                    <div class="history" onclick="openPopUp('popup__gift-history')"></div>
-                    <div class="arrow"></div>
+                    <div class="action--background stock" onclick="openPopUp('popup__gift-stock')"></div>
+                    <div class="action--background gift" onclick="openPopUp('popup__gift-exchange')"></div>
+                    <div class="action--background history" onclick="openPopUp('popup__gift-history')"></div>
+                    <div class="action--background arrow"></div>
                 </div>
             </div>
             <div class="row-box justify-content-end">
@@ -68,29 +69,37 @@
             <div class="right__bottom">
                 <div class="wrap-gift-item">
                     <div class="gift__item">
-                        <div class="gift__item--disabled-lv5"></div>
+                        <div class="gift__item--background gift__item--disabled-lv5"></div>
                     </div>
                     <div class="gift__item">
-                        <div class="gift__item--disabled-lv4"></div>
+                        <div class="gift__item--background gift__item--disabled-lv4"></div>
                     </div>
                     <div class="gift__item">
-                        <div class="gift__item--active-lv3"></div>
+                        <div class="gift__item--background gift__item--active-lv3"></div>
                     </div>
                     <div class="gift__item">
-                        <div class="gift__item--received-lv2"></div>
+                        <div class="gift__item--background gift__item--received-lv2"></div>
                     </div>
                     <div class="gift__item">
-                        <div class="gift__item--received-lv1"></div>
+                        <div class="gift__item--background gift__item--received-lv1"></div>
                     </div>
                 </div>
                 <div class="scrollbar">
-                    <div class="sroll-top">
+                    <!-- <div class="sroll-top">
                         <div class="sroll-top-left"></div>
                         <div class="sroll-top-right"></div>
                     </div>
                     <div class="scroll-bottom">
                         <div class="scroll-bottom-left"></div>
                         <div class="scroll-bottom-right"></div>
+                    </div> -->
+                    <div class="wrap__scroll">
+                        <div class="scroll-empty"></div>
+                        <div class="scroll-active"></div>
+                    </div>
+                    <div class="wrap__scroll wrap__scroll--padding-left">
+                        <div class="scroll-empty"></div>
+                        <div class="scroll-active"></div>
                     </div>
                     <div class="wrap-scrollbar-text">
                         <div class="scrollbar-text">
