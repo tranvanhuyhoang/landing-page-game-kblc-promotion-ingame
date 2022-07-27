@@ -8,7 +8,7 @@
     <title>KBLC</title>
 </head>
 <body>
-    <div class="container">
+    <div id="landscape" class="container">
         <div class="character"></div>
         <div class="title"></div>
         <div class="logo"></div>
@@ -47,7 +47,7 @@
             <div class="row-button">
                 <div class="row-wrap-btn-top">
                     <div class="btn-left" onclick="randomOpenGift('popup__gift-1')"></div>
-                    <div class="btn-right" onclick="get5Gift('popup__gift-5')"></div>
+                    <div class="btn-right" onclick="randomOpenGift('popup__gift-5')"></div>
                     <!-- <div class="btn-left" onclick="randomOpenGift('popup__gift-1')"></div>
                     <div class="btn-right" onclick="randomOpenGift('popup__gift-5')"></div> -->
                 </div>
@@ -71,29 +71,29 @@
                 <div class="cicle"></div>
                 <div class="wrap-gift-item">
                     <div class="gift__item">
-                        <div class="gift__item--background gift__item--disabled-lv5"></div>
+                        <div class="gift__item--background gift__item-lv5--disabled"></div>
                     </div>
                     <div class="gift__item">
-                        <div class="gift__item--background gift__item--disabled-lv4"></div>
+                        <div class="gift__item--background gift__item-lv4--received"></div>
                     </div>
                     <div class="gift__item">
-                        <div class="gift__item--background gift__item--active-lv3"></div>
+                        <div class="gift__item--background gift__item-lv3--active"></div>
                     </div>
                     <div class="gift__item">
-                        <div class="gift__item--background gift__item--received-lv2"></div>
+                        <div class="gift__item--background gift__item-lv2--received"></div>
                     </div>
                     <div class="gift__item">
-                        <div class="gift__item--background gift__item--received-lv1"></div>
+                        <div class="gift__item--background gift__item-lv1--received"></div>
                     </div>
                 </div>
                 <div class="scrollbar">
                     <div class="wrap__scroll">
-                        <div class="scroll-empty"></div>
-                        <div class="scroll-active"></div>
+                        <div class="scroll-empty scroll-empty-3"></div>
+                        <div class="scroll-active scroll-active-3"></div>
                     </div>
                     <div class="wrap__scroll wrap__scroll--padding-left">
-                        <div class="scroll-empty"></div>
-                        <div class="scroll-active"></div>
+                        <div class="scroll-empty scroll-empty-3"></div>
+                        <div class="scroll-active scroll-active-3"></div>
                     </div>
                     <div class="wrap-scrollbar-text">
                         <div class="scrollbar-text">
@@ -134,14 +134,12 @@
             <div class="popup__background"></div> 
             <div class="popup__content">
                 <div class="wrap__gift-item">
-                    <div class="gift__item-image gift__item-image-1"></div>
-                    <div class="gift__item-image gift__item-image-2"></div>
-                    <div class="gift__item-image gift__item-image-3"></div>
-                    <div class="gift__item-image gift__item-image-4"></div>
-                    <div class="gift__item-image gift__item-image-5"></div>
-                    <div class="wrap__gift-text">
-                        Chiến Hồn Cam (Ngẫu Nhiên) | Chiến hồn Tím (Ngẫu Nhiên)	| Chiêu Mộ Lệnh | Bột than bảo vệ Lv1 | Âu Dã Tử Phù Hộ
-                    </div>
+                    <div id="gift__image-position-1" class="gift__item-image"></div>
+                    <div id="gift__image-position-2" class="gift__item-image"></div>
+                    <div id="gift__image-position-3" class="gift__item-image"></div>
+                    <div id="gift__image-position-4" class="gift__item-image"></div>
+                    <div id="gift__image-position-5" class="gift__item-image"></div>
+                    <div id="img-gift5-name" class="wrap__gift-text"></div>
                 </div>
                 <div class="popup__close" onclick="closePopUp('popup__gift-5')"></div>
             </div>
@@ -178,53 +176,159 @@
                     <div class="rule">
                         <div class="line"></div>
                         <div class="rule__title">THỂ LỆ</div>
+                        </br>
                         <div class="rule__text">
-                            Thời gian diễn ra: Từ ngày 15/08/2022 đến ngày 31/08/2022.
-
-                            Nội dung: Trong thời gian diễn ra hoạt động, Chúa Công mở kho báu sẽ nhận được các phần quà siêu hấp dẫn.
-
-                            Nhận lượt mở kho báu
-                            + Miễn phí: Đăng nhập mỗi ngày sẽ miễn phí 1 lượt mở kho báu.
-
-                            + Mua lượt: 90 CP = 1 lượt Mở Kho báu.
-
+                            <b>Thời gian diễn ra: Từ ngày 15/08/2022 đến ngày 31/08/2022.</b>
+                            </br>
+                            <b>Nội dung:</b> Trong thời gian diễn ra hoạt động, Chúa Công mở kho báu sẽ nhận được các phần quà siêu hấp dẫn.
+                            </br>
+                            <b>Nhận lượt mở kho báu</b>
+                            </br>
+                            <b>+ Miễn phí:</b> Đăng nhập mỗi ngày sẽ miễn phí 1 lượt mở kho báu.
+                            </br>
+                            <b>+ Mua lượt:</b> 90 CP = 1 lượt Mở Kho báu.
+                            </br>
                             Số lượt mở kho báu càng nhiều sẽ nhận thêm quà thưởng đạt mốc càng hấp dẫn.
-
-                            Giải thưởng
+                            </br>
+                            <b>Giải thưởng</b>
+                            </br>
                             Khi tham gia mở kho báu sẽ nhận ngẫu nhiên 1 trong các phần quà sau:
+                            <table>
+                                <tr>
+                                  <th>Vật phẩm</th>
+                                  <th>Số Lượng</th>
+                                </tr>
+                                <tr class="text-center">
+                                  <td>Đích Lô*1</td>
+                                  <td>1</td>
+                                </tr>
+                                <tr class="text-center">
+                                  <td>Tuyệt Ảnh*1</td>
+                                  <td>1</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>Tuyệt Ảnh*1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>Chiêu Mộ Lệnhx10</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>Phiếu đổi quà</td>
+                                    <td>1</td>
+                                </tr>
+                                  <tr class="text-center">
+                                    <td>Chiến Hồn Cam (Ngẫu Nhiên)</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>Chiêu Mộ Lệnh</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>Bột than bảo vệ Lv1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>Âu Dã Tử Phù Hộ</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>Vạn Đoàn Thạch</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>+ 1 Lượt Mở Kho Báu</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>Trúc Diệp Thanh</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>Nguyên Liệu Kỵ Thuật</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>Lô Nham Than</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>Bạc</td>
+                                    <td>50,000</td>
+                                  </tr>
+                            </table>
 
-                            Vật phẩm	Số Lượng
-                            Đích Lô*1	1
-                            Tuyệt Ảnh*1	1
-                            Chiêu Mộ Lệnh x10	1
-                            Phiếu đổi quà	1
-                            Chiến Hồn Cam (Ngẫu Nhiên)	1
-                            Chiến hồn Tím (Ngẫu Nhiên)	1
-                            Chiêu Mộ Lệnh	1
-                            Bột than bảo vệ Lv1	1
-                            Âu Dã Tử Phù Hộ	1
-                            Vạn Đoàn Thạch	1
-                            + 1 Lượt Mở Kho Báu	1
-                            Trúc Diệp Thanh	5
-                            Nguyên Liệu Kỵ Thuật	5
-                            Lô Nham Than	5
-                            Bạc	50,000
-                            Shop đổi quà: Khi tham gia mở kho báu sẽ nhận được "Phiếu đổi quà", dùng "Phiếu đổi quà" để đổi các vật phẩm trong shop.
-
-                            Phiếu đổi	Vật phẩm	Số Lượng
-                            50	Rương Tướng Truyền Kỳ	1
-                            30	Skin Quan Vũ Võ Tài Thần	1
-                            15	Mảnh Thú Cưỡi Tím	50
-                            5	Chiêu Mộ Lệnh*10	1
-                            1	Bạc	  500,000
-                            Mở kho báu đạt mốc nhận quà: Tích lũy số lần mở kho báu đạt mốc chỉ định sẽ nhận các phần quà tương ứng.
-
-                            Số lượt	Vật phẩm	Số Lượng
-                            10	Chiến Hồn Tím (Tự Chọn)	1
-                            50	Binh Ấn Cam	1
-                            100	Chiến Hồn Cam (Tự Chọn)	1
-                            200	Binh Ấn Đỏ	1
-                            500	Chiến Hồn Đỏ (Tự Chọn)	1
+                            <b>Shop đổi quà:</b> Khi tham gia mở kho báu sẽ nhận được "Phiếu đổi quà", dùng "Phiếu đổi quà" để đổi các vật phẩm trong shop.
+                            </br>
+                            <table>
+                                <tr>
+                                  <th>Phiếu đổi</th>
+                                  <th>Vật phẩm</th>
+                                  <th>Số Lượng</th>
+                                </tr>
+                                <tr class="text-center">
+                                  <td>50</td>
+                                  <td>Rương Tướng Truyền Kỳ	</td>
+                                  <td>1</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>30</td>
+                                    <td>Skin Quan Vũ Võ Tài Thần</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>15</td>
+                                    <td>Mảnh Thú Cưỡi Tím</td>
+                                    <td>50</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>5</td>
+                                    <td>Chiêu Mộ Lệnh*10</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>1</td>
+                                    <td>Bạc</td>
+                                    <td>500,000</td>
+                                  </tr>
+                            </table>
+                            </br>
+                            <b>Mở kho báu đạt mốc nhận quà:</b> Tích lũy số lần mở kho báu đạt mốc chỉ định sẽ nhận các phần quà tương ứng.
+                            </br>
+                            <table>
+                                <tr>
+                                  <th>Số lượt</th>
+                                  <th>Vật phẩm</th>
+                                  <th>Số Lượng</th>
+                                </tr>
+                                <tr class="text-center">
+                                  <td>10</td>
+                                  <td>Chiến Hồn Tím (Tự Chọn)</td>
+                                  <td>1</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>50</td>
+                                    <td>Binh Ấn Cam</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>100</td>
+                                    <td>Chiến Hồn Cam (Tự Chọn)</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>200</td>
+                                    <td>Binh Ấn Đỏ</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td>500</td>
+                                    <td>Chiến Hồn Đỏ (Tự Chọn)</td>
+                                    <td>1</td>
+                                  </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -247,7 +351,7 @@
                         <div class="card__active"></div>
                         <div class="card__content">
                             <div class="card__text card__text-top">Cần có 50</div>
-                            <div class="card__btn"></div>
+                            <div class="card__btn card__btn--disabled"></div>
                             <div class="card__text card__text-bottom">Đổi 1 lần duy nhất</div>
                         </div>
                     </div>
@@ -255,28 +359,28 @@
                         <div class="card__active"></div>
                         <div class="card__content">
                             <div class="card__text card__text-top">Cần có 50</div>
-                            <div class="card__btn"></div>
+                            <div class="card__btn card__btn--disabled"></div>
                             <div class="card__text card__text-bottom">Đổi 1 lần duy nhất</div>
                         </div>
                     </div>
                     <div class="card card3">
                         <div class="card__content">
                             <div class="card__text card__text-top">Cần có 50</div>
-                            <div class="card__btn"></div>
+                            <div class="card__btn card__btn--active"></div>
                             <div class="card__text card__text-bottom">Đổi 1 lần duy nhất</div>
                         </div>
                     </div>
                     <div class="card card4">
                         <div class="card__content">
                             <div class="card__text card__text-top">Cần có 50</div>
-                            <div class="card__btn"></div>
+                            <div class="card__btn card__btn--disabled"></div>
                             <div class="card__text card__text-bottom">Đổi không giới hạn</div>
                         </div>
                     </div>
                     <div class="card card5">
                         <div class="card__content">
                             <div class="card__text card__text-top">Cần có 50</div>
-                            <div class="card__btn"></div>
+                            <div class="card__btn card__btn--active"></div>
                             <div class="card__text card__text-bottom">Đổi không giới hạn</div>
                         </div>
                     </div>
@@ -291,7 +395,76 @@
                     <div class="name"></div>
                     <div class="line"></div>
                 </div>
-                Pop up lịch sử
+                <div class="content__bottom">
+                    <table class="table__history">
+                        <thead>
+                            <tr>
+                                <th class="column-1">STT</th>
+                                <th class="text-start column-2">Tên Quà</th>
+                                <th class="column-3">Trạng thái</th>
+                                <th class="column-4">Thời gian</th>
+                            </tr>
+                        </thead>
+                    </table>
+                        <div class="table__scroll">
+                            <table class="table__history">
+                                <tr>
+                                    <td class="column-1">1</td>
+                                    <td class="text-start column-2">Chiêu Mộ Lệnh x10</td>
+                                    <td class="column-3">Đã nhận</td>
+                                    <td class="column-4">27/06/2022 - 9:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-1">2</td>
+                                    <td class="text-start column-2">Bột than bảo vệ Lv1</td>
+                                    <td class="column-3">Đang chờ xử lý</td>
+                                    <td class="column-4">27/06/2022 - 9:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-1">3</td>
+                                    <td class="text-start column-2">Bột than bảo vệ Lv1</td>
+                                    <td class="column-3">Chưa thành công</td>
+                                    <td class="column-4">27/06/2022 - 9:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-1">4</td>
+                                    <td class="text-start column-2">Chiêu Mộ Lệnh x10</td>
+                                    <td class="column-3">Nhận lại</td>
+                                    <td class="column-4">27/06/2022 - 9:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-1">5</td>
+                                    <td class="text-start column-2">Bột than bảo vệ Lv1</td>
+                                    <td class="column-3">Đã nhận</td>
+                                    <td class="column-4">27/06/2022 - 9:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-1">6</td>
+                                    <td class="text-start column-2">Bột than bảo vệ Lv1</td>
+                                    <td class="column-3">Đã nhận</td>
+                                    <td class="column-4">27/06/2022 - 9:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-1">7</td>
+                                    <td class="text-start column-2">Bột than bảo vệ Lv1</td>
+                                    <td class="column-3">Đã nhận</td>
+                                    <td class="column-4">27/06/2022 - 9:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-1">8</td>
+                                    <td class="text-start column-2">Bột than bảo vệ Lv1</td>
+                                    <td class="column-3">Đã nhận</td>
+                                    <td class="column-4">27/06/2022 - 9:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-1">9</td>
+                                    <td class="text-start column-2">Bột than bảo vệ Lv1</td>
+                                    <td class="column-3">Đã nhận</td>
+                                    <td class="column-4">27/06/2022 - 9:00</td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
                 <div class="popup__close" onclick="closePopUp('popup__gift-history')"></div>
             </div>
         </div>
@@ -304,7 +477,7 @@
                         <div class="text">Mỗi ngày, Chúa công được nhận 01 lượt mở miễn phí</div>
                     </div>
                     <div class="content__bottom">
-                        <div class="btn-buy"></div>
+                        <div class="btn-buy" onclick="openPopUpBuyTurn('popup__buy-turn')"></div>
                         <div class="text">Dùng CP mua lượt mở kho báu, 01 lượt mở = 90 CP </br> 
                             Mở kho báu đạt mốc nhận thêm quà hấp dẫn
                         </div>
@@ -325,38 +498,38 @@
                         <table class="table__receive-turn-free">
                             <thead>
                                 <tr>
-                                    <th>STT</th>
+                                    <th class="column-1">STT</th>
                                     <th class="text-start">Điều kiện</th>
-                                    <th>Số lượt</th>
-                                    <th>Thời gian</th>
+                                    <th class="column-3">Số lượt</th>
+                                    <th class="column-4">Thời gian</th>
                                 </tr>
                             </thead>
                         </table>
                             <div class="table__scroll">
                                 <table class="table__receive-turn-free">
                                     <tr>
+                                        <td class="column-1">1</td>
+                                        <td class="text-start column-2">Nhận lượt miễn phí mỗi ngày</td>
                                         <td>1</td>
-                                        <td class="text-start">Nhận lượt miễn phí mỗi ngày</td>
-                                        <td>1</td>
-                                        <td>Germany</td>
+                                        <td class="column-4">27/06/2022 - 9:00</td>
                                     </tr>
                                     <tr>
-                                        <td>2</td>
-                                        <td class="text-start">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td class="column-1">2</td>
+                                        <td class="text-start column-2">Nhận lượt miễn phí mỗi ngày</td>
                                         <td>1</td>
-                                        <td>Mexico</td>
+                                        <td class="column-4">27/06/2022 - 9:00</td>
                                     </tr>
                                     <tr>
-                                        <td>3</td>
-                                        <td class="text-start">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td class="column-1">3</td>
+                                        <td class="text-start column-2">Nhận lượt miễn phí mỗi ngày</td>
                                         <td>2</td>
-                                        <td>Mexico</td>
+                                        <td class="column-4">27/06/2022 - 9:00</td>
                                     </tr>
                                     <tr>
-                                        <td>4</td>
-                                        <td class="text-start">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td class="column-1">4</td>
+                                        <td class="text-start column-2">Nhận lượt miễn phí mỗi ngày</td>
                                         <td>2</td>
-                                        <td>Mexico</td>
+                                        <td class="column-4">27/06/2022 - 9:00</td>
                                     </tr>
                                 </table>
                             </div>
@@ -364,7 +537,97 @@
                 <div class="popup__close" onclick="closePopUp('popup__receive-turn-free')"></div>
             </div>
         </div>
+        <div id="popup__buy-turn" class="popup">
+            <div class="popup__background"></div> 
+            <div class="popup__content">
+                    <div class="content__top">
+                        <div class="title__receive-turn-free">MUA LƯỢT MỞ BẰNG CP</div>
+                        <div class="text">Dùng CP mua lượt mở kho báu, 01 lượt mở = 90 CP</div>
+                        <div class="counter">
+                            <div class="decrease">-</div>
+                            <input type="text" class="number" value="1"/>
+                            <div class="increase">+</div>
+                        </div>
+                        <!-- Begin check condition -->
+                            <form id="pm__condition-form" class="active-captcha" action="#" method="post">
+                                <div class="captcha">
+                                    <div class="captcha-img">
+                                        <img id="captcha-image" src="data:image/png;base64,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">
+                                    </div>
+                                </div>
+                                <div class="captcha__input">
+                                    <input type="text" class="captcha__input-text" name="captcha" placeholder="| Type the text">
+                                </div>
+                            </form>
+                        <!-- End check condition -->
+                        <div class="btn-buy"></div>
+                    </div>
+                    <div class="content__bottom">
+                        <table class="table__receive-turn-free">
+                            <thead>
+                                <tr>
+                                    <th class="column-1">STT</th>
+                                    <th class="text-start">Điều kiện</th>
+                                    <th class="column-3">Số lượt</th>
+                                    <th class="column-4">Thời gian</th>
+                                </tr>
+                            </thead>
+                        </table>
+                            <div class="table__scroll">
+                                <table class="table__receive-turn-free">
+                                    <tr>
+                                        <td class="column-1">1</td>
+                                        <td class="text-start column-2">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td>1</td>
+                                        <td class="column-4">27/06/2022 - 9:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="column-1">2</td>
+                                        <td class="text-start column-2">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td>1</td>
+                                        <td class="column-4">27/06/2022 - 9:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="column-1">3</td>
+                                        <td class="text-start column-2">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td>2</td>
+                                        <td class="column-4">27/06/2022 - 9:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="column-1">4</td>
+                                        <td class="text-start column-2">Nhận lượt miễn phí mỗi ngày</td>
+                                        <td>2</td>
+                                        <td class="column-4">27/06/2022 - 9:00</td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                <div class="popup__close" onclick="closePopUp('popup__buy-turn')"></div>
+            </div>
+        </div>
+        <div id="popup__out-of-cp" class="popup">
+            <div class="popup__background"></div> 
+            <div class="popup__content">
+                <div class="popup__content--center">
+                    <div class="text">Bạn đã dùng hết CP</div>
+                    <div class="small-text">*Vui lòng nạp thêm CP</div>
+                </div>
+                <div class="popup__close" onclick="closePopUp('popup__out-of-cp')"></div>
+            </div>
+        </div>
+        <div id="popup__confirm-buy-cp" class="popup">
+            <div class="popup__background"></div> 
+            <div class="popup__content">
+                <div class="popup__content--center">
+                    <div class="text">Bạn đồng ý dùng CP </br> mua số lượt mở kho báu này? </div>
+                    <div class="btn-agree"></div>
+                </div>
+                <div class="popup__close" onclick="closePopUp('popup__confirm-buy-cp')"></div>
+            </div>
+        </div>
     </div>
+    <div id="tablet-desktop">This version doesn't support tablets & desktops. Let's use mobile and change to a landscape screen, please!</div>
+    <div id="portrait">This version doesn't support a portrait screen. Change to landscape screen, please!</div>
     <script type="text/javascript">
         var urlPromotion = "http://localhost:5500/getData.html";
       </script>

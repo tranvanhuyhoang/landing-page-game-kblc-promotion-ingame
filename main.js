@@ -1,8 +1,8 @@
 var dataDefault = {
     url: '',
-    directory: 'http://khobaulucchau.com/kblc/getData.html',
-    directory5Gift: 'http://khobaulucchau.com/kblc/getdatax5.html',
-    urlSaveData: 'http://khobaulucchau.com/kblc/savedata.html',
+    directory: 'http://khobaulucchau.com/getData.html',
+    directory5Gift: 'http://khobaulucchau.com/getdatax5.html',
+    urlSaveData: 'http://khobaulucchau.com/savedata.html',
     items: {
         A: {class:'gift__item-image-1', name: 'Đích Lô'},
         B: {class:'gift__item-image-2', name: 'Tuyệt Ảnh'},
@@ -26,6 +26,46 @@ var dataDefault = {
         T: {class:'gift__item-image-20', name: 'Bạc'},
     }
 };
+
+let resultEl = document.querySelector(".resultSet");
+let decrease = document.querySelector(".decrease");
+let increase = document.querySelector(".increase");
+let number = document.querySelector(".number");
+let couter = 0;
+
+decrease.addEventListener("click", clickHandleCouter);
+increase.addEventListener("click", clickHandleCouter);
+number.addEventListener("change", changeHandler);
+
+function clickHandleCouter(event) {
+    let countEl = event.target.parentNode.querySelector(".number");
+    if (event.target.className.match(/\bdecrease\b/)) {
+        if(Number(countEl.value) > 1){
+            countEl.value = Number(countEl.value) - 1;
+        }
+    } else if (event.target.className.match(/\bincrease\b/)) {
+        countEl.value = Number(countEl.value) + 1;
+    }
+    triggerEvent(countEl, "change");
+};
+
+function changeHandler(event) {
+    Number(document.querySelector('.number').value);
+};
+
+function triggerEvent(el, type){
+    if ('createEvent' in document) {
+         // modern browsers, IE9+
+         var e = document.createEvent('HTMLEvents');
+         e.initEvent(type, false, true);
+         el.dispatchEvent(e);
+     } else {
+         var e = document.createEventObject();
+         e.eventType = type;
+         el.fireEvent('on'+e.eventType, e);
+     }
+ }
+
 
 function openPopUp(id){
     const element = document.getElementById(id);
@@ -53,6 +93,11 @@ function openPopUpReceiveGiftFree(id){
     closePopUp('popup__receive-turn');
 } 
 
+function openPopUpBuyTurn(id){
+    openPopUp(id);
+    closePopUp('popup__receive-turn');
+} 
+
 function randomOpenGift(popUpId) {
     let activeClass= 'active-light';
     let timeLoop = 10;
@@ -64,6 +109,9 @@ function randomOpenGift(popUpId) {
         previousRandomLight.remove(activeClass);
         if(popUpId === 'popup__gift-1'){
             get1Gift();
+        }
+        if(popUpId === 'popup__gift-5'){
+            get5Gift();
         }
         return;
       }
@@ -80,6 +128,10 @@ function randomOpenGift(popUpId) {
 
 function getImgClass(code){
     return dataDefault.items[code].class;
+};
+
+function getNameGiftActive(code){
+    return dataDefault.items[code].name;
 };
 
 function get1Gift() {
@@ -113,21 +165,21 @@ function get5Gift() {
             const response = this.response && JSON.parse(this.response);
             if(response){
                 const {data} = response;
-                console.log("data ", data)
                 for(let key = 0; key < data.length; key++){
                     let Key128 = data[key].split("=")[1];
                     let index = parseInt(Key128.charAt(127));
                     let AC = Key128.substr(index + 32, 1);
                     let Encry1 = Key128.substr(index, 32);
-                    let Encry2 = md5(Encry1 + Key128.substr(index + 32, 1));
-                    listPrize.push({
-                        AC,
-                        Encry1,
-                        Encry2,
-                    })
-                } 
-                console.log("listPrize ", listPrize);
-                // saveData({Encry1, Encry2, AC});  
+                    let Encry2 = md5(Encry1 + Key128.substr(index + 32, 1)); 
+                    if(listPrize && listPrize.length < 5){
+                        listPrize.push({
+                            AC,
+                            Encry1,
+                            Encry2,
+                        })
+                    } 
+                }
+                saveData5(listPrize);  
             }
         }
     }
@@ -156,6 +208,33 @@ function saveData(data){
     xhr.send(dataSend);
 };
 
+function saveData5(data){
+    let dataKey = [];
+    if(data){
+        for(let i = 0; i < data.length; i++){
+            dataKey.push("Key32Bytes1=" + data[i].Encry1 + "&Key32Bytes2=" + data[i].Encry2);
+        }
+    }
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", dataDefault.urlSaveData);
+    
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onload = () => {
+        const response = JSON.parse(xhr.responseText);
+        if (response.data === 'ok') {
+            activeGift5(data);
+        }
+    }   
+
+    let dataSend = `{
+        data: ${dataKey}
+    }`;
+
+    xhr.send(dataSend);
+};
+
 function activeGift1(elementActive){
     const classActive = getImgClass(elementActive);
     const element = document.getElementById('img-gift1');
@@ -165,4 +244,20 @@ function activeGift1(elementActive){
     openPopUp("popup__gift-1");
 }
 
+function activeGift5(listElementActive){
+    let nameOf5Gift = [];    
+    let lengthListElement = listElementActive.length;
+    if(listElementActive){
+        for(let i = 0; i < lengthListElement; i++){
+            const classActive = getImgClass(listElementActive[i].AC);
+            const nameGiftActive = getNameGiftActive(listElementActive[i].AC);
+            const element = document.getElementById(`gift__image-position-${i+1}`);
+            element.classList.add(classActive);
+            nameOf5Gift.push(nameGiftActive);
+        }
+    }
+    const elGiftName = document.getElementById('img-gift5-name');
+    elGiftName.textContent = nameOf5Gift.join(' | ');
+    openPopUp("popup__gift-5");
+}
 
