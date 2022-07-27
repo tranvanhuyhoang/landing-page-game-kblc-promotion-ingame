@@ -8,6 +8,11 @@
     src: url('./public/fonts/Barlow-Italic.ttf');
 }
 
+@font-face {
+    font-family: BarlowBold;
+    src: url('./public/fonts/Barlow-Bold.ttf');
+}
+
 body{
     background: #f5f5f5;
     margin: 0;
@@ -158,31 +163,34 @@ body{
 }
 
 .home__left .wrap-action .arrow{
-    background: url(./public/images/mainsite/button.png) -123px 2px;
+    background: url(./public/images/mainsite/button.png);
+    background-position: -123px -1%;
     height: 18px;
-    width: 260px;
+    width: 110%;
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 365px;
     margin-right: 15px;
     z-index: 1;
     position: absolute;
-    top: 34%;
+    /* top: 34%; */
+    top: calc(50% - 18px/2); 
     right: -1.8%;
 }
 
 .home__left .box{
     background: url(./public/images/mainsite/ruong.png);
-    background-position: 62% 61%;
+    background-position: 61% 61%;
     height: 41%;
     width: 50%;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 89%;
+    background-size: 47%;
     z-index: 3;
     text-align: end;
     align-items: end;
     position: fixed;
+    background-attachment: fixed;
 }
 
 .home__left .light-box{
@@ -200,71 +208,64 @@ body{
     z-index: 2;
 }
 
+.home__left .light-box .light{
+    height: 40%;
+    width: 20%; 
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+}
+
 .home__left .light-box .light__1{
     background: url(./public/images/mainsite/light_ruong1.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     background-size: 23%;
     background-position: 33% 56%;
-    position: fixed;
-    height: 40%;
-    width: 20%;
     top: 34%;
     left: 27%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 25%;
 }
 
 .home__left .light-box .light__2{
     background: url(./public/images/mainsite/light_ruong2.png);
+    background-position: 46% 84%;
+    top: 47%;
+    left: 39%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 25%;
-    background-position: 46% 84%;
-    position: fixed;
-    height: 40%;
-    width: 20%;
-    top: 47%;
-    left: 39%;
 }
 
 .home__left .light-box .light__3{
     background: url(./public/images/mainsite/light_ruong3.png);
+    background-position: 57% 57%;
+    top: 31%;
+    left: 45%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 25%;
-    background-position: 57% 57%;
-    position: fixed;
-    height: 40%;
-    width: 20%;
-    top: 31%;
-    left: 45%;
 }
 
 .home__left .light-box .light__4{
     background: url(./public/images/mainsite/light_ruong4.png);
+    background-position: 70% 84%;
+    top: 40%;
+    left: 55%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 25%;
-    background-position: 70% 84%;
-    position: fixed;
-    height: 40%;
-    width: 20%;
-    top: 40%;
-    left: 55%;
 }
 
 .home__left .light-box .light__5{
     background: url(./public/images/mainsite/light_ruong5.png);
+    background-position: 83% 64%;
+    top: 34%;
+    left: 64%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 25%;
-    background-position: 83% 64%;
-    position: fixed;
-    height: 40%;
-    width: 20%;
-    top: 34%;
-    left: 64%;
 }
-
 
 .home__left .btn-left{
     background: url(./public/images/mainsite/button.png) 2px 2px;
@@ -324,7 +325,7 @@ body{
     position: absolute;
     bottom: 3.5%;
     left: 38%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .character{
@@ -356,15 +357,15 @@ body{
 .cicle{
     background: url(./public/images/mainsite/MocNhanQua_scrollbar.png);
     background-position: 20.5% 21%;
-    height: 77.8px;
+    height: 23%;
     width: 40px;
     background-repeat: no-repeat;
     background-size: 190%;
     z-index: 5;
     display: inline-block;
     position: absolute;
-    top: 49%;
-    right: 10px;
+    top: calc(50% - 23%/2);
+    right: 0;
 }
 
 .home__right{
@@ -535,6 +536,7 @@ body{
 }
 
 .home__right .right__bottom .scrollbar .wrap-scrollbar-text .scrollbar-text{
+    position: relative;
     font-size: 8px;
     color: #e1c9a2;
     line-height: 9px;
@@ -544,6 +546,19 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.home__right .right__bottom .scrollbar .wrap-scrollbar-text .line{
+    background: url(./public/images/mainsite/MocNhanQua_scrollbar.png);
+    background-position: 13.82% 11.5%;
+    height: 2px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 320%;
+    z-index: 5;
+    display: inline-block;
+    position: absolute;
+    top: 0;
 }
 
 .home__right .right__bottom .scrollbar .scroll-bottom-left{
@@ -606,23 +621,250 @@ body{
     position: relative;
 }
 
+#popup__gift-1 .popup__content .wrap__gift-item{
+    width: 90px;
+    min-height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#popup__gift-1 .popup__content .wrap__gift-item .gift__item-image{
+    width: 100%;
+    height: 90px;
+    /* background: url(./public/images/popup/RuongQua.png);
+    background-size: 212%;
+    background-repeat: no-repeat;
+    background-position: 0% 101%; */
+}
+
+#popup__gift-1 .popup__content .wrap__gift-item .gift__item-name{
+    font-size: 9px;
+    color: #e1c9a2;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#popup__gift-5 .popup__content .wrap__gift-text{
+    width: 100%;
+    font-size: 8px;
+    text-align: center;
+    margin-top: 5px;
+    color: #e1c9a2;
+}
+
+#popup__gift-5 .popup__content .wrap__gift-item{
+    width: 200px;
+    min-height: 120px;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#popup__gift-5 .popup__content .wrap__gift-item .gift__item-image{
+    width: 50px;
+    min-height: 50px;
+    display: inline-block;
+    margin: 4px;
+}
+
+.gift__item-image-1{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 1% 0%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-2{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 25% 0%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-3{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-4{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 74% 0%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-5{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 98% 0%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+.gift__item-image-6{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 1% 31%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-7{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 25% 31%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-8{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 50% 31%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-9{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 74% 31%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-10{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 98% 31%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-11{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 1% 60%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-12{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 25% 60%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-13{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-14{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 74% 60%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-15{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 98% 60%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-16{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 1% 91%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-17{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 25% 91%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-18{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 50% 91%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-19{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 74% 91%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
+.gift__item-image-20{
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-repeat: no-repeat;
+    background-position: 98% 91%;
+    background-size: 709%;
+    width: 50px;
+    height: 50px;
+}
+
 
 .popup__gift .popup__close{
     background: url(./public/images/popup/Popup_btn.png);
+    background-position: 63.5% -146.8%;
+    background-size: 1700%;
     width: 30px;
     height: 30px;
-    background-repeat: no-repeat;
-    background-position: 91.3% -127%;
-    background-size: 58%;
-    background-attachment: fixed;
     position: absolute;
     top: -13px;
     right: -13px;
 }
 
 .popup__gift-info .popup__content{
-    width: 50%;
-    height: 71%;
+    width: 470px;
+    height: 306px;
     background: url(./public/images/popup/Frame_3Popup-LS-DQ-KQ.png);
     z-index: 1;
     background-size: 100%;
@@ -666,12 +908,13 @@ body{
     right: -13px;
 }
 
-
 .popup__gift-check .popup__content .popup__title .name{
     background: url(./public/images/popup/Popup_title.png);
-    background-position: 2% 53.5%;
+    background-position: 2% 54.5%;
     background-repeat: no-repeat;
-    background-size: 102%;
+    background-size: 100%;
+    height: 42%;
+    width: 20%;
 }
 
 .popup__gift-check .popup__content .popup__title .sub-name{
@@ -688,21 +931,371 @@ body{
     background-position: 47% 80%;
     background-repeat: no-repeat;
     background-size: 450%;
+    height: 19%;
+}
+
+.popup__gift-check .popup__content .popup__title{
+    height: 25.5%;
+}
+
+#popup__gift-stock .popup__close{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 63.5% -146.8%;
+    background-size: 1700%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -13px;
+    right: -13px;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item{
+    width: 75%;
+    height: 60%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .rule{
+    width: 100%;
+    min-height: 40px;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .rule .line{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 47% 80%;
+    background-repeat: no-repeat;
+    background-size: 450%;
+    height: 14.81px;
+    width: 169px;
+    margin: 0 auto;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .rule .rule__title{
+    font-size: 13px;
+    color: #e1c9a2;
+    text-align: center;
+    margin-top: 3px;
+    font-family: 'Barlow';
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .rule .rule__text{
+    
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: rgba(124,124,124,0.4);
+    opacity: 0.24;
+    box-shadow: inset 0 0 1px rgba(246,246,246,0.8);
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item::-webkit-scrollbar-thumb
+{
+	background-color: rgb(49,19,16);
+	background-image: -webkit-linear-gradient(90deg,
+    rgba(49,19,16,1) 0%,
+    rgba(198,151,94,1) 100%,						  
+    rgba(0,212,255,1) 100%,
+    transparent);
+    box-shadow: inset 0 0 1px rgba(246,246,246,0.8);
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item{
+    width: 57px;
+    height: 83px;
+    display: inline-flex;
+    margin: 0 4px;
+    background: url(./public/images/popup/Popup_khoqua.png);
+    background-size: 578%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-1{
+    background-position: -1% 0%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-2{
+    background-position: 24% 0%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-3{
+    background-position: 50% 0%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-4{
+    background-position: 75% 0%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-5{
+    background-position: 100% 0%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-6{
+    background-position: -1% 35%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-7{
+    background-position: 24% 35%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-8{
+    background-position: 50% 35%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-9{
+    background-position: 75% 35%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-10{
+    background-position: 100% 35%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-11{
+    background-position: -1% 69%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-12{
+    background-position: 24% 69%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-13{
+    background-position: 50% 69%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-14{
+    background-position: 75% 69%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-15{
+    background-position: 100% 69%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-16{
+    background-position: -1% 105%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-17{
+    background-position: 24% 105%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-18{
+    background-position: 50% 105%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-19{
+    background-position: 75% 105%;
+}
+
+#popup__gift-stock .popup__content .wrap__gift-item .gift-item-20{
+    background-position: 100% 105%;
+}
+
+.popup__gift-exchange .popup__close{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 63.5% -146.8%;
+    background-size: 1700%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -13px;
+    right: -13px;
+}
+
+.popup__gift-exchange .popup__content .popup__title{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    margin: 10px 0 5px 0px;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .popup__gift-exchange .popup__content .popup__title .name{
     background: url(./public/images/popup/Popup_title.png);
-    background-position: 0% -3%;
+    background-position: 0% -1%;
     background-repeat: no-repeat;
     background-size: 103%;
-    height: 54%;
+    height: 81%;
 }
 
 .popup__gift-exchange .popup__content .popup__title .line{
     background: url(./public/images/popup/Popup_btn.png);
     background-position: 47% 80%;
     background-repeat: no-repeat;
-    background-size: 450%;
+    background-size: 417%;
+    height: 26%;
+}
+
+.popup__gift-exchange .popup__content .popup__title .wrap__cp{
+    position: absolute;
+    bottom: 0;
+    left: 13px;
+    height: 23px;
+    overflow: auto;
+}
+
+.popup__gift-exchange .popup__content .popup__title .wrap__cp .flag{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 43% 74.5%;
+    background-repeat: no-repeat;
+    background-size: 2000%;
+    width: 23px;
+    height: 100%;
+    float: left;
+}
+
+.popup__gift-exchange .popup__content .popup__title .wrap__cp .cp{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 52% 74%;
+    background-repeat: no-repeat;
+    background-size: 795%;
+    width: 62px;
+    height: 100%;
+    float: right;
+    color: #e1c9a2;
+    font-size: 12px;
+    line-height: 22px;
+    text-indent: -10px;
+}
+
+.popup__gift-exchange .popup__content .wrap__card{
+    display: flex;
+    height: 67%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 10px;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card{
+    width: calc(100%/5);
+    margin: 0 3px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card .card__active{
+    position: absolute;
+    top: -4px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 107.6% 0.8%;
+    background-repeat: no-repeat;
+    background-size: 600%;
+    z-index: 2;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card .card__content{
+    /* margin-bottom: 10px;
+    z-index: 3; */
+    z-index: 3;
+    position: absolute;
+    bottom: 10px;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card .card__content .card__text-top{
+    text-align: center;
+    margin-left: -27px;
+    color: #d0d0d0;
+    font-size: 6px;
+    font-family: 'BarlowBold';
+
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card .card__content .card__text-bottom{
+    font-size: 6px;
+    text-align: center;
+    color: #707070;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card .card__content .card__btn{
+    width: 65px;
+    height: 19px;
+    margin: 7px auto 16px auto;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card1 .card__content .card__btn{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 15.6% 81.8%;
+    background-repeat: no-repeat;
+    background-size: 850%;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card2 .card__content .card__btn{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 15.6% 81.8%;
+    background-repeat: no-repeat;
+    background-size: 850%;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card3 .card__content .card__btn{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 15.6% 81.8%;
+    background-repeat: no-repeat;
+    background-size: 850%;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card4 .card__content .card__btn{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 15.6% 81.8%;
+    background-repeat: no-repeat;
+    background-size: 850%;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card5 .card__content .card__btn{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 15.6% 81.8%;
+    background-repeat: no-repeat;
+    background-size: 850%;
+}
+
+.popup__gift-exchange .popup__content{
+    width: 481px;
+    height: 313px;
+    background: url(./public/images/popup/Frame_3Popup-LS-DQ-KQ.png);
+    z-index: 1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.popup__gift-exchange .popup__content .wrap__card .card1{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 3% 1%;
+    background-repeat: no-repeat;
+    background-size: 600%;
+}
+.popup__gift-exchange .popup__content .wrap__card .card2{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 24% 1%;
+    background-repeat: no-repeat;
+    background-size: 600%;
+}
+.popup__gift-exchange .popup__content .wrap__card .card3{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 45% 1%;
+    background-repeat: no-repeat;
+    background-size: 600%;
+}
+.popup__gift-exchange .popup__content .wrap__card .card4{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 66.5% 1%;
+    background-repeat: no-repeat;
+    background-size: 600%;
+}
+.popup__gift-exchange .popup__content .wrap__card .card5{
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 88% 1%;
+    background-repeat: no-repeat;
+    background-size: 600%;
 }
 
 .popup__gift-history .popup__content .popup__title .name{
@@ -720,8 +1313,8 @@ body{
 }
 
 #popup__receive-turn .popup__content{
-    width: 33%;
-    height: 50%;
+    width: 278.52px;
+    height: 195px;
     background: url(./public/images/popup/Frame_popup-NhanLMoKB.png);
     z-index: 1;
     background-size: 100%;
@@ -767,18 +1360,16 @@ body{
 
 #popup__receive-turn .popup__content .content__top .btn-receive{
     background: url(./public/images/popup/Popup_btn.png);
-    background-position: -64.5% -83%;
-    background-attachment: fixed;
-    background-size: 55%;
+    background-position: 41.5% -19%;
+    background-size: 335%;
     width: 135px;
     height: 43px;
 }
 
 #popup__receive-turn .popup__content .content__bottom .btn-buy{
     background: url(./public/images/popup/Popup_btn.png);
-    background-position: -28.5% -251%;
-    background-attachment: fixed;
-    background-size: 55%;
+    background-position: -1% -19.5%;
+    background-size: 335%;
     width: 135px;
     height: 43px;
 }
@@ -787,9 +1378,8 @@ body{
 
 #popup__receive-turn .popup__close{
     background: url(./public/images/popup/Popup_btn.png);
-    background-position: -51.3% -82%;
-    background-attachment: fixed;
-    background-size: 55%;
+    background-position: -43% -36%;
+    background-size: 1650%;
     width: 26px;
     height: 26px;
     position: absolute;
@@ -798,8 +1388,8 @@ body{
 }
 
 #popup__receive-turn-free .popup__content{
-    width: 37%;
-    height: 50%;
+    width: 312.27px;
+    height: 195px;
     background: url(./public/images/popup/Frame_popup-NhanLMoMP.png);
     z-index: 1;
     background-size: 100%;
@@ -827,9 +1417,9 @@ body{
 
 #popup__receive-turn-free .popup__content .content__top .btn-receive{
     background: url(./public/images/popup/Popup_btn.png);
-    background-position: 16% -247%;
-    background-attachment: fixed;
-    background-size: 55%;
+    background-position: 86.3% 79%;
+    background-repeat: no-repeat;
+    background-size: 414%;
     width: 112px;
     height: 37px;
     margin: 0 auto;
@@ -878,9 +1468,8 @@ body{
 
 #popup__receive-turn-free .popup__close{
     background: url(./public/images/popup/Popup_btn.png);
-    background-position: -47% -82%;
-    background-attachment: fixed;
-    background-size: 55%;
+    background-position: -43% -36%;
+    background-size: 1650%;
     width: 26px;
     height: 26px;
     position: absolute;
@@ -906,11 +1495,18 @@ body{
     transition: all .2s;
 }
 
+.home__left .light-box  .active-light{
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all .2s !important;
+}
+
 .text-start{
     text-align: start;
 }
 
 /* ------------------RESPONSIVE------------------ */
+
 /* ----------- iPhone 4 and 4S ----------- */
 /* Landscape */
 @media only screen 
@@ -928,26 +1524,22 @@ body{
         bottom: 10px;
     }
 
-    .home__left .box{
-        background-position: 68% 73% !important;
-    }
-
     .home__left .wrap-action{
         width: 37%;
     }
 
     .home__left .wrap-action .arrow{
-        width: 215px;
-        top: 34%;
+        /* width: 215px; */
+        /* top: 34%; */
     }
     
-    .cicle{
+    /* .cicle{
         top: 48% !important;
         background-position: 21.5% 25%;
         height: 77.8px;
         width: 35px;
         right: 4px !important;
-    }
+    } */
 
     .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
         right: 2%;
@@ -977,11 +1569,7 @@ body{
     }
 
     .home__left .wrap-action .arrow{
-        width: 200px !important;
-    }
-
-    .home__left .box{
-        background-position: 68% 71% !important;
+        /* width: 200px !important; */
     }
 
     .row-button{
@@ -1009,10 +1597,10 @@ body{
         background-position: 100.2% 40.5%;
     }
 
-    .cicle{
+    /* .cicle{
         top: 27%;
         right: 2px;
-    }
+    } */
 
     
 }
@@ -1033,26 +1621,22 @@ body{
         bottom: 10px;
     }
 
-    .home__left .box{
-        background-position: 68% 73% !important;
-    }
-
     .home__left .wrap-action{
         width: 37%;
     }
 
     .home__left .wrap-action .arrow{
-        width: 215px;
-        top: 34%;
+        /* width: 215px; */
+        /* top: 34%; */
     }
-    
+/*     
     .cicle{
         top: 48% !important;
         background-position: 21.5% 25%;
         height: 77.8px;
         width: 35px;
         right: 4px !important;
-    }
+    } */
 
     .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
         right: 2%;
@@ -1076,18 +1660,15 @@ body{
         right: 53%;
         background-size: 105%;
     }
-    .cicle{
+    /* .cicle{
         right: 5px;
-    }
-    .home__left .box{
-        background-position: 68% 108%;
-    }
+    } */
     .home__left .wrap-action{
         width: 37%;
     }
     .home__left .wrap-action .arrow{
-        width: 240px;
-        top: 32%;
+        /* width: 240px; */
+        /* top: 32%; */
     }
     .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
         right: 2%;
@@ -1112,15 +1693,81 @@ body{
         right: 50%;
         background-size: 90%;
     }
-    .cicle{
+    /* .cicle{
         top: 48%;
         right: 2px;
-    }
+    } */
     .home__left .wrap-action .arrow{
-        top: 35%;
-        width: 234px;
+        /* top: 35%; */
+        /* width: 234px; */
     }
     .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
         right: 2.5%;
+    }
+}
+
+/* ----------- Galaxy S3 ----------- */
+/* Landscape */
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: landscape) {
+    .title{
+        top: 8% !important;
+        right: 53% !important;
+        background-size: 95% !important;
+    }
+    .home__left .wrap-action .arrow{
+        /* top: 34% !important; */
+        /* width: 210px !important; */
+    }
+}
+
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+/* Landscape */
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+    .title{
+        top: 7%;
+        right: 53%;
+        background-size: 90%;
+    }
+    .home__left .wrap-action .arrow {
+        /* top: 34%; */
+        /* width: 208px; */
+    }
+    /* .cicle{
+        top: 49.5% !important;
+    } */
+    .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
+        right: 2%;
+    }
+}
+
+/* ----------- Galaxy S6 ----------- */
+/* Landscape */
+@media screen 
+  and (min-device-width: 360px) 
+  and (max-device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
+    .title {
+        top: 8%;
+        right: 53%;
+        background-size: 90%;
+    }
+    .home__left .wrap-action .arrow {
+        /* top: 34%; */
+        /* width: 213px; */
+    }
+    /* .cicle{
+        top: 49.5% !important;
+    } */
+    .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
+        right: 2%;
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover'">
     <link rel="stylesheet" href="./style.css">
     <title>KBLC</title>
 </head>
@@ -11,7 +11,6 @@
     <div class="container">
         <div class="character"></div>
         <div class="title"></div>
-        <div class="cicle"></div>
         <div class="logo"></div>
         <div class="wrap-select-languages">
             <div class="select-languages" onclick="openSelectLanguages()">
@@ -38,17 +37,19 @@
             <div class="row-box justify-content-end">
                 <div class="box"></div>
                 <div class="light-box">
-                    <div class="light__1"></div>
-                    <div class="light__2"></div>
-                    <div class="light__3"></div>
-                    <div class="light__4"></div>
-                    <div class="light__5"></div>
+                    <div class="light__1 light"></div>
+                    <div class="light__2 light"></div>
+                    <div class="light__3 light"></div>
+                    <div class="light__4 light"></div>
+                    <div class="light__5 light"></div>
                 </div>
             </div>
             <div class="row-button">
                 <div class="row-wrap-btn-top">
-                    <div class="btn-left" onclick="openPopUp('popup__gift-1')"></div>
-                    <div class="btn-right" onclick="openPopUp('popup__gift-5')"></div>
+                    <div class="btn-left" onclick="randomOpenGift('popup__gift-1')"></div>
+                    <div class="btn-right" onclick="get5Gift('popup__gift-5')"></div>
+                    <!-- <div class="btn-left" onclick="randomOpenGift('popup__gift-1')"></div>
+                    <div class="btn-right" onclick="randomOpenGift('popup__gift-5')"></div> -->
                 </div>
                 <div class="row-wrap-btn-bottom">
                     <div class="btn-bottom" onclick="openPopUp('popup__receive-turn')"></div>
@@ -67,6 +68,7 @@
                 </div>
             </div>
             <div class="right__bottom">
+                <div class="cicle"></div>
                 <div class="wrap-gift-item">
                     <div class="gift__item">
                         <div class="gift__item--background gift__item--disabled-lv5"></div>
@@ -85,14 +87,6 @@
                     </div>
                 </div>
                 <div class="scrollbar">
-                    <!-- <div class="sroll-top">
-                        <div class="sroll-top-left"></div>
-                        <div class="sroll-top-right"></div>
-                    </div>
-                    <div class="scroll-bottom">
-                        <div class="scroll-bottom-left"></div>
-                        <div class="scroll-bottom-right"></div>
-                    </div> -->
                     <div class="wrap__scroll">
                         <div class="scroll-empty"></div>
                         <div class="scroll-active"></div>
@@ -106,15 +100,19 @@
                             <b>500</b> Lượt Mở
                         </div>
                         <div class="scrollbar-text">
+                            <div class="line"></div>
                             <b>200</b> Lượt Mở
                         </div>
                         <div class="scrollbar-text">
+                            <div class="line"></div>
                             <b>100</b> Lượt Mở
                         </div>
                         <div class="scrollbar-text">
+                            <div class="line"></div>
                             <b>50</b> Lượt Mở
                         </div>
                         <div class="scrollbar-text">
+                            <div class="line"></div>
                             <b>10</b> Lượt Mở
                         </div>
                     </div>
@@ -125,14 +123,26 @@
         <div id="popup__gift-1" class="popup popup__gift">
             <div class="popup__background"></div> 
             <div class="popup__content">
-                popop content 1
+                <div class="wrap__gift-item">
+                    <div id="img-gift1" class="gift__item-image"></div>
+                    <div id="img-gift1-name" class="gift__item-name"></div>
+                </div>
                 <div class="popup__close" onclick="closePopUp('popup__gift-1')"></div>
             </div>
         </div>
         <div id="popup__gift-5" class="popup popup__gift">
             <div class="popup__background"></div> 
             <div class="popup__content">
-                popop content 5
+                <div class="wrap__gift-item">
+                    <div class="gift__item-image gift__item-image-1"></div>
+                    <div class="gift__item-image gift__item-image-2"></div>
+                    <div class="gift__item-image gift__item-image-3"></div>
+                    <div class="gift__item-image gift__item-image-4"></div>
+                    <div class="gift__item-image gift__item-image-5"></div>
+                    <div class="wrap__gift-text">
+                        Chiến Hồn Cam (Ngẫu Nhiên) | Chiến hồn Tím (Ngẫu Nhiên)	| Chiêu Mộ Lệnh | Bột than bảo vệ Lv1 | Âu Dã Tử Phù Hộ
+                    </div>
+                </div>
                 <div class="popup__close" onclick="closePopUp('popup__gift-5')"></div>
             </div>
         </div>
@@ -144,7 +154,80 @@
                     <div class="line"></div>
                     <div class="sub-name">QUÀ TẶNG</div>
                 </div>
-                Pop up kho quà
+                <div class="wrap__gift-item">
+                    <div class="gift-item gift-item-1"></div>
+                    <div class="gift-item gift-item-2"></div>
+                    <div class="gift-item gift-item-3"></div>
+                    <div class="gift-item gift-item-4"></div>
+                    <div class="gift-item gift-item-5"></div>
+                    <div class="gift-item gift-item-6"></div>
+                    <div class="gift-item gift-item-7"></div>
+                    <div class="gift-item gift-item-8"></div>
+                    <div class="gift-item gift-item-9"></div>
+                    <div class="gift-item gift-item-10"></div>
+                    <div class="gift-item gift-item-11"></div>
+                    <div class="gift-item gift-item-12"></div>
+                    <div class="gift-item gift-item-13"></div>
+                    <div class="gift-item gift-item-14"></div>
+                    <div class="gift-item gift-item-15"></div>
+                    <div class="gift-item gift-item-16"></div>
+                    <div class="gift-item gift-item-17"></div>
+                    <div class="gift-item gift-item-18"></div>
+                    <div class="gift-item gift-item-19"></div>
+                    <div class="gift-item gift-item-20"></div>
+                    <div class="rule">
+                        <div class="line"></div>
+                        <div class="rule__title">THỂ LỆ</div>
+                        <div class="rule__text">
+                            Thời gian diễn ra: Từ ngày 15/08/2022 đến ngày 31/08/2022.
+
+                            Nội dung: Trong thời gian diễn ra hoạt động, Chúa Công mở kho báu sẽ nhận được các phần quà siêu hấp dẫn.
+
+                            Nhận lượt mở kho báu
+                            + Miễn phí: Đăng nhập mỗi ngày sẽ miễn phí 1 lượt mở kho báu.
+
+                            + Mua lượt: 90 CP = 1 lượt Mở Kho báu.
+
+                            Số lượt mở kho báu càng nhiều sẽ nhận thêm quà thưởng đạt mốc càng hấp dẫn.
+
+                            Giải thưởng
+                            Khi tham gia mở kho báu sẽ nhận ngẫu nhiên 1 trong các phần quà sau:
+
+                            Vật phẩm	Số Lượng
+                            Đích Lô*1	1
+                            Tuyệt Ảnh*1	1
+                            Chiêu Mộ Lệnh x10	1
+                            Phiếu đổi quà	1
+                            Chiến Hồn Cam (Ngẫu Nhiên)	1
+                            Chiến hồn Tím (Ngẫu Nhiên)	1
+                            Chiêu Mộ Lệnh	1
+                            Bột than bảo vệ Lv1	1
+                            Âu Dã Tử Phù Hộ	1
+                            Vạn Đoàn Thạch	1
+                            + 1 Lượt Mở Kho Báu	1
+                            Trúc Diệp Thanh	5
+                            Nguyên Liệu Kỵ Thuật	5
+                            Lô Nham Than	5
+                            Bạc	50,000
+                            Shop đổi quà: Khi tham gia mở kho báu sẽ nhận được "Phiếu đổi quà", dùng "Phiếu đổi quà" để đổi các vật phẩm trong shop.
+
+                            Phiếu đổi	Vật phẩm	Số Lượng
+                            50	Rương Tướng Truyền Kỳ	1
+                            30	Skin Quan Vũ Võ Tài Thần	1
+                            15	Mảnh Thú Cưỡi Tím	50
+                            5	Chiêu Mộ Lệnh*10	1
+                            1	Bạc	  500,000
+                            Mở kho báu đạt mốc nhận quà: Tích lũy số lần mở kho báu đạt mốc chỉ định sẽ nhận các phần quà tương ứng.
+
+                            Số lượt	Vật phẩm	Số Lượng
+                            10	Chiến Hồn Tím (Tự Chọn)	1
+                            50	Binh Ấn Cam	1
+                            100	Chiến Hồn Cam (Tự Chọn)	1
+                            200	Binh Ấn Đỏ	1
+                            500	Chiến Hồn Đỏ (Tự Chọn)	1
+                        </div>
+                    </div>
+                </div>
                 <div class="popup__close" onclick="closePopUp('popup__gift-stock')"></div>
             </div>
         </div>
@@ -154,8 +237,50 @@
                 <div class="popup__title">
                     <div class="name"></div>
                     <div class="line"></div>
+                    <div class="wrap__cp">
+                        <div class="flag"></div>
+                        <div class="cp">3000</div>
+                    </div>
                 </div>
-                Pop up đổi quà
+                <div class="wrap__card">
+                    <div class="card card1">
+                        <div class="card__active"></div>
+                        <div class="card__content">
+                            <div class="card__text card__text-top">Cần có 50</div>
+                            <div class="card__btn"></div>
+                            <div class="card__text card__text-bottom">Đổi 1 lần duy nhất</div>
+                        </div>
+                    </div>
+                    <div class="card card2">
+                        <div class="card__active"></div>
+                        <div class="card__content">
+                            <div class="card__text card__text-top">Cần có 50</div>
+                            <div class="card__btn"></div>
+                            <div class="card__text card__text-bottom">Đổi 1 lần duy nhất</div>
+                        </div>
+                    </div>
+                    <div class="card card3">
+                        <div class="card__content">
+                            <div class="card__text card__text-top">Cần có 50</div>
+                            <div class="card__btn"></div>
+                            <div class="card__text card__text-bottom">Đổi 1 lần duy nhất</div>
+                        </div>
+                    </div>
+                    <div class="card card4">
+                        <div class="card__content">
+                            <div class="card__text card__text-top">Cần có 50</div>
+                            <div class="card__btn"></div>
+                            <div class="card__text card__text-bottom">Đổi không giới hạn</div>
+                        </div>
+                    </div>
+                    <div class="card card5">
+                        <div class="card__content">
+                            <div class="card__text card__text-top">Cần có 50</div>
+                            <div class="card__btn"></div>
+                            <div class="card__text card__text-bottom">Đổi không giới hạn</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="popup__close" onclick="closePopUp('popup__gift-exchange')"></div>
             </div>
         </div>
@@ -240,6 +365,10 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        var urlPromotion = "http://localhost:5500/getData.html";
+      </script>
     <script src="main.js"></script>
+    <script src="js/md5.min.js"></script>
 </body>
 </html>
