@@ -1803,27 +1803,25 @@ body{
 }
 
 #popup__buy-turn .popup__content .content__top .counter .increase{
-    font-size: 20px;
-    font-family: 'Barlow';
     display: inline-block;
     width: 20px;
     height: 20px;
-    line-height: 14px;
-    background: -webkit-linear-gradient(#bd8646, #2d0e0b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 60.4% 88.5%;
+    background-repeat: no-repeat;
+    background-size: 2600%;
+    margin-left: 3px;
 }
 
 #popup__buy-turn .popup__content .content__top .counter .decrease{
-    font-size: 20px;
-    font-family: 'Barlow';
     display: inline-block;
     width: 20px;
     height: 20px;
-    line-height: 14px;
-    background: -webkit-linear-gradient(#bd8646, #2d0e0b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: url(./public/images/popup/Popup_btn.png);
+    background-position: 63.4% 88.5%;
+    background-repeat: no-repeat;
+    background-size: 2600%;
+    margin-right: 3px;
 }
 
 #popup__buy-turn .popup__content .content__top .counter .number{
@@ -1842,7 +1840,7 @@ body{
 }
 
 #popup__buy-turn input[type=text] {
-    width: 60px;
+    width: 100px;
     height: 29px;
     padding: 5px;
     box-sizing: border-box;
@@ -1858,6 +1856,7 @@ body{
 
 #popup__buy-turn input[type=text]::placeholder{
     color: #e1c9a2;
+    opacity: 0.5;
 }
 
 #popup__buy-turn .popup__content .content__top .btn-buy{
@@ -1970,22 +1969,43 @@ body{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
     .title{
-        top: 6%;
-        right: 55%;
+        top: 6% !important;
+        right: 57% !important;
+    }
+
+    .character{
+        background-size: 31%;
     }
 
     .row-button{
-        left: 35%;
+        left: 32%;
         bottom: 10px;
     }
 
     .home__left .wrap-action{
-        width: 37%;
+        width: 183.2px !important;
+        margin-top: 11%;
     }
 
     .home__left .wrap-action .arrow{
         /* width: 215px; */
         /* top: 34%; */
+    }
+
+    .home__left .btn-left{
+        background-position:  2px 0px;
+        width: 113px;
+        height: 36px;
+        background-size: 292%;
+        margin: 0 0px 0 5px;
+    }
+
+    .home__left .btn-right {
+        background-position: 0% 45%;
+        width: 113px;
+        height: 36px;
+        background-size: 292%;
+        margin: 0 5px 0 0px;
     }
     
     /* .cicle{
@@ -1997,19 +2017,32 @@ body{
     } */
 
     .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
-        right: 2%;
+        right: 1%;
     }
 
     .home__left .light-box{
         background-size: 49%;
         background-position: 62% 61%;
     }
+
+    .home__right .right__bottom .gift__item--background{
+        height: 40px;
+    }
+
+    .popup__gift-info .popup__content{
+        width: 435px;
+        height: 283px;
+    }
+
+    #popup__buy-turn .popup__content{
+        width: 440px;
+    }
 }
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 /* Landscape */
 @media only screen 
-  and (min-device-width: 320px) 
+  and (min-device-width: 481px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
@@ -2063,7 +2096,7 @@ body{
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-width: 500px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
@@ -2073,7 +2106,7 @@ body{
     }
 
     .row-button{
-        left: 35%;
+        left: 32%;
         bottom: 10px;
     }
 
@@ -2140,13 +2173,13 @@ body{
 /* ----------- iPhone X ----------- */
 /* Landscape */
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
+  and (min-device-width: 812px) 
+  and (max-device-width: 896px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
     .title{
-        top: 1%;
-        right: 50%;
+        top: -1% !important;
+        right: 52% !important;
         background-size: 90%;
     }
     /* .cicle{
@@ -2165,8 +2198,8 @@ body{
 /* ----------- Galaxy S3 ----------- */
 /* Landscape */
 @media screen 
-  and (min-device-width: 320px) 
-  and (max-device-height: 640px) 
+  and (min-device-width: 600px) 
+  and (max-device-width: 640px) 
   and (-webkit-device-pixel-ratio: 2) 
   and (orientation: landscape) {
     .title{
@@ -2182,7 +2215,7 @@ body{
 
 /* ----------- Galaxy S4, S5 and Note 3 ----------- */
 /* Landscape */
-@media screen 
+/* @media screen 
   and (min-device-width: 320px) 
   and (max-device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) 
@@ -2193,16 +2226,11 @@ body{
         background-size: 90%;
     }
     .home__left .wrap-action .arrow {
-        /* top: 34%; */
-        /* width: 208px; */
     }
-    /* .cicle{
-        top: 49.5% !important;
-    } */
     .home__right .right__top .mount__opened, .home__right .right__top .mount__available{
         right: 2%;
     }
-}
+} */
 
 /* ----------- Galaxy S6 ----------- */
 /* Landscape */
@@ -2249,7 +2277,7 @@ body{
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     #tablet-desktop{
         display: block;
         padding: 5px;
@@ -2257,5 +2285,16 @@ body{
     }
     #landscape, #portrait{
         display: none;
+    }
+}
+
+@media only screen and (max-height: 320px) {
+    .popup__gift-info .popup__content{
+        width: 435px;
+        height: 283px;
+    }
+
+    #popup__buy-turn .popup__content{
+        width: 440px;
     }
 }
