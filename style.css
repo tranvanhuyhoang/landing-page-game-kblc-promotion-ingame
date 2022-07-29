@@ -385,7 +385,7 @@ body{
     display: flex;
     align-items: center;
     position: fixed;
-    top: 10%;
+    top: 2%;
     right: 3%;
 }
 
@@ -393,7 +393,7 @@ body{
     display: flex;
     align-items: center;
     position: fixed;
-    top: 2%;
+    top: 10%;
     right: 3%;
 }
 
